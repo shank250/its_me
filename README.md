@@ -1,6 +1,6 @@
 # Portfolio Website
 
-![Website Preview](screenshot.png)
+![Website Preview](Screenshot.png)
 
 ## Description
 
