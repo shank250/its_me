@@ -1,0 +1,491 @@
+/* Color Definitions */
+:root {
+  --dark-brown: #180000;
+  --light-pink: #fec1c1;
+  --accent-color: #ff7171; /* You can replace this with another color */
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  /* display: flex; */
+}
+
+/* Reset some default margins and paddings */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar styles */
+.navbar {
+  /* width: 70%; */
+  background-color: var(--dark-brown);
+  color: var(--light-pink);
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure the navbar is above other content */
+}
+/* 
+.width-adjust {
+  width: 70%;
+  align-items: center;
+} */
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content:space-between;
+}
+
+.nav-name {
+  padding-left: 7.5%;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  padding: 1rem;
+  padding-right: 7.5%;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.nav-item {
+  margin: 0 20px;
+}
+
+.nav-item a {
+  color: var(--light-pink);
+  text-decoration: none;
+}
+
+/* Content styles */
+.content {
+  padding: 20px;
+}
+
+
+
+
+.section1 {
+  width: 100%;
+  height: 100vh; /* 100% of viewport height */
+  background-color: var(--dark-brown); /* Set your desired background color */
+  display: flex;
+  flex-direction: column;
+  color: var(--light-pink);
+  align-items: center;
+  justify-content:center;
+  font-size: 24px;
+  font-family: 'Space Mono', monospace;
+}
+
+.box {
+  width: 70%;
+  text-align: left;
+  padding-right: 10%;
+}
+
+.ai_ml {
+  
+  font-family: 'Tilt Prism', cursive;
+}
+
+.name {
+  font-size: 1rem;
+  padding-bottom: 1%;
+}
+
+.intro {
+  font-size: 1.5rem;
+  padding-right: 20%;
+
+}
+
+/* anuimated underline */
+/* Style for the animated underline */
+.underline-animation {
+  position: relative;
+  display: inline-block;
+  /* font-size: 24px; */
+  /* padding-bottom: 5px; Space for the initial underline */
+}
+
+/* Underline animation */
+.underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px; /* Initial underline height */
+  bottom: 0;
+  left: 0;
+  background-color: var(--light-pink); /* Set your desired underline color */
+  transform: scaleX(0); /* Start with no width */
+  transform-origin: bottom right;
+  transition: transform 0.3s ease; /* Animation transition */
+}
+
+/* On hover, expand the underline */
+.underline-animation:hover::after {
+  transform: scaleX(1); /* Expand the underline to full width */
+  transform-origin: bottom left;
+}
+
+
+/* Cartoonish Button Styles */
+
+.button {
+  padding: 0.75rem 0.75rem;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: var(--dark-brown);
+  background-color: var(--light-pink);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px var(--accent-color);
+}
+
+.button-container {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content:left;
+  align-items:end;
+  /* height: 100vh;  */
+  padding-top: 1rem;
+  /* padding-left: 20px; Add some space on the left */
+}
+
+.button:hover {background-color: var(--accent-color)}
+
+.button:active {
+  background-color: var(--light-pink);
+  box-shadow: 0 5px var(--accent-color);
+  transform: translateY(4px);
+}
+
+
+/* designing section2 */
+.section2 {
+  width: 100%;
+  height: 100vh; /* 100% of viewport height */
+  background-color: var(--light-pink); /* Set your desired background color */
+  display: flex;
+  flex-direction: column;
+  color: var(--dark-brown);
+  align-items: center;
+  justify-content:center;
+  font-size: 24px;
+  font-family: 'Space Mono', monospace;
+}
+
+
+/* Style for the album grid */
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Style for each album item */
+.album-item {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.album-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.album-item h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.album-item p {
+  font-size: 14px;
+  color: #777;
+}
+
+.video-container {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* button-dark */
+.button-dark {
+  padding: 1rem 1rem;
+  font-size: 1.25rem;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: var(--light-pink);
+  background-color: var(--dark-brown);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px var(--accent-color);
+}
+
+.button-container {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content:left;
+  align-items:end;
+  /* height: 100vh;  */
+  padding-top: 1rem;
+  /* padding-left: 20px; Add some space on the left */
+}
+
+.button-dark:hover {background-color: var(--accent-color)}
+
+.button-dark:active {
+  background-color: var(--dark-brown);
+  box-shadow: 0 5px var(--accent-color);
+  transform: translateY(4px);
+}
+
+
+#icon-image {
+  width: 25px; /* Adjust the width to your desired icon width */
+  height: 25px; /* Adjust the height to your desired icon height */
+  max-width: 100%; /* Maintain aspect ratio and prevent overflow */
+  max-height: 100%; /* Maintain aspect ratio and prevent overflow */
+}
+
+
+/* tree fromat */
+
+#fontSizeWrapper { font-size: 16px; }
+
+#fontSize {
+  width: 100px;
+  font-size: 1em;
+  }
+
+/* ————————————————————–
+  Tree core styles
+*/
+.tree { margin: 1em; }
+
+.tree input {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  }
+
+.tree input ~ ul { display: none; }
+
+.tree input:checked ~ ul { display: block; }
+
+/* ————————————————————–
+  Tree rows
+*/
+.tree li {
+  line-height: 1.2;
+  position: relative;
+  padding: 0 0 1em 1em;
+  }
+
+.tree ul li { padding: 1em 0 0 1em; }
+
+.tree > li:last-child { padding-bottom: 0; }
+
+/* ————————————————————–
+  Tree labels
+*/
+.tree_label {
+  position: relative;
+  display: inline-block;
+  background: var(--light-pink);
+  }
+
+label.tree_label { cursor: pointer; }
+
+label.tree_label:hover { color: #666; }
+
+/* ————————————————————–
+  Tree expanded icon
+*/
+label.tree_label:before {
+  background: var(--dark-brown);
+  color: var(--light-pink);
+  position: relative;
+  z-index: 1;
+  float: left;
+  margin: 0 1em 0 -2em;
+  width: 1em;
+  height: 1em;
+  border-radius: 1em;
+  content: '+';
+  text-align: center;
+  line-height: .9em;
+  }
+
+:checked ~ label.tree_label:before { content: '–'; }
+
+/* ————————————————————–
+  Tree branches
+*/
+.tree li:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -.5em;
+  display: block;
+  width: 0;
+  border-left: 1px solid var(--accent-color);
+  content: "";
+  }
+
+.tree_label:after {
+  position: absolute;
+  top: 0;
+  left: -1.5em;
+  display: block;
+  height: 0.5em;
+  width: 1em;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+  border-radius: 0 0 0 .3em;
+  content: '';
+  }
+
+label.tree_label:after { border-bottom: 0; }
+
+:checked ~ label.tree_label:after {
+  border-radius: 0 .3em 0 0;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+  border-bottom: 0;
+  border-left: 0;
+  bottom: 0;
+  top: 0.5em;
+  height: auto;
+  }
+
+.tree li:last-child:before {
+  height: 1em;
+  bottom: auto;
+  }
+
+.tree > li:last-child:before { display: none; }
+
+.tree_custom {
+  display: block;
+  background: var(--light-pink);
+  padding: 1em;
+  border-radius: 0.3em;
+}
+
+/* link color */
+
+a {
+  color: var(--dark-brown); /* Normal link color */
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-color); /* Hover link color */
+  text-decoration: underline; /* Add underline on hover */
+}
+
+/* anuimated underline dark */
+/* Style for the animated underline */
+.underline-animation-dark {
+  position: relative;
+  display: inline-block;
+  /* font-size: 24px; */
+  /* padding-bottom: 5px; Space for the initial underline */
+}
+
+/* Underline animation */
+.underline-animation-dark::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px; /* Initial underline height */
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent-color); /* Set your desired underline color */
+  transform: scaleX(0); /* Start with no width */
+  transform-origin: bottom right;
+  transition: transform 0.3s ease; /* Animation transition */
+}
+
+/* On hover, expand the underline */
+.underline-animation-dark:hover::after {
+  transform: scaleX(1); /* Expand the underline to full width */
+  transform-origin: bottom left;
+}
+
+/* link color modification for the ending section  */
+.link {
+  color: var(--light-pink); /* Normal link color */
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--accent-color); /* Hover link color */
+  text-decoration: underline; /* Add underline on hover */
+}
+
+
+.section3 {
+  width: 100%;
+  height: 50vh; /* 100% of viewport height */
+  background-color: var(--dark-brown); /* Set your desired background color */
+  display: flex;
+  flex-direction: column;
+  color: var(--light-pink);
+  align-items: center;
+  justify-content:center;
+  font-size: 24px;
+  font-family: 'Space Mono', monospace;
+}
+
+
+/* copying a text */
+
+.copyable-text {
+  position: relative;
+  display: inline-block;
+}
+
+.copyable-text::after {
+  content: '\f0c5'; /* Unicode character for clipboard icon */
+  font-family: 'Font Awesome'; /* You can use an icon font like Font Awesome */
+  font-size: 16px;
+  color: #999;
+  margin-left: 5px;
+  display: none;
+  cursor: pointer;
+}
+
+.copyable-text:hover::after {
+  display: inline-block;
+}
